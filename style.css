@@ -11,6 +11,8 @@
 
 body {
     font-size: 1.6rem;
+    background-color: rgb(60, 7, 85);
+    color: rgb(255, 255, 255);
 }
 
 #page {
@@ -19,7 +21,74 @@ body {
 }
 
 header {
-    border: 1px solid red;
     padding-block: 3rem;
     text-align: center;
+}
+
+fieldset {
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+
+fieldset div {
+    margin-bottom: 1rem;
+
+    label {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        padding: 1rem;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        color: black;
+    }
+
+    input:focus {
+        outline: .2rem solid yellow;
+    }
+
+    input::placeholder {
+        color: rgb(206, 201, 201);
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+        outline: none;
+    }
+
+    input[type=checkbox] + label,
+    input[type=radio] + label {
+        display: inline;
+    }
+}
+    select {
+        padding: 1rem;
+        border-radius: 1rem;
+        outline: none;
+    }
+
+    button {
+        background: rgb(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), rgb(0, 0, 0));
+        color: rgb(0, 0, 0);
+        padding: 1rem;
+        width: 10rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        border: none;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background: rgb(rgb(0, 0, 0), rgb(255, 255, 255), rgb(255, 255, 255));
+        transition: backgorund ,2s;
+    }
+
+@media(max-width: 600px) {
+    body {
+        padding-inline: 1rem;
+    }
 }
